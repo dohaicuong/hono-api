@@ -1,0 +1,38 @@
+{
+	"name": "hono-api",
+	"version": "0.0.1",
+	"description": "api build by hono",
+	"type": "module",
+	"scripts": {
+		"dev": "bun --env-file=.env.local tsx watch src/index.ts",
+		"format": "bunx biome format --write ./",
+		"lint": "bunx biome lint --write ./",
+		"check": "bunx biome check --write ./",
+		"generate": "bun --env-file=.env.local drizzle-kit generate",
+		"migrate": "bun --env-file=.env.local drizzle-kit migrate",
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.12.0",
+		"@hono/swagger-ui": "^0.4.0",
+		"@hono/zod-openapi": "^0.15.3",
+		"drizzle-orm": "^0.33.0",
+		"drizzle-zod": "^0.5.1",
+		"hono": "^4.5.5",
+		"lucia": "^3.2.0",
+		"postgres": "^3.4.4",
+		"tsx": "^4.17.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@testcontainers/postgresql": "^10.11.0",
+		"@types/bun": "latest",
+		"@vitest/coverage-v8": "^2.0.5",
+		"drizzle-kit": "^0.24.0",
+		"lefthook": "^1.7.13",
+		"testcontainers": "^10.11.0",
+		"vitest": "^2.0.5"
+	}
+}
