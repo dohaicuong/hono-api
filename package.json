@@ -5,13 +5,13 @@
 	"type": "module",
 	"scripts": {
 		"dev": "bun --env-file=.env.local tsx watch src/index.ts",
-		"format": "bunx biome format --write ./",
-		"lint": "bunx biome lint --write ./",
-		"check": "bunx biome check --write ./",
 		"generate": "bun --env-file=.env.local drizzle-kit generate",
 		"migrate": "bun --env-file=.env.local drizzle-kit migrate",
 		"test": "vitest",
-		"coverage": "vitest run --coverage"
+		"coverage": "vitest run --coverage",
+		"format": "bunx biome format --write ./",
+		"lint": "bunx biome lint --write ./",
+		"check": "bunx biome check --write ./"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.12.0",
